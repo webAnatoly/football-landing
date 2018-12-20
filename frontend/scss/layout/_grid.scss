@@ -1,13 +1,15 @@
 .container {
   display: block;
   width: 100%;
-  max-width: 180rem; // 1800px / 10 = 180
+  min-height: 12.7rem;
+  max-width: 144rem; // 1440px / 10 = 180
   margin: 0 auto;
+  border: 1px solid red;
 }
 
 .row {
   width: 100%;
-  min-height: 100px; // 100px просто для примера, можно менять как угодно.
+  min-height: inherit;
   display: flex;
   justify-content: space-between;
 
@@ -47,6 +49,7 @@ div[class^="col-"]:not(:last-child) {
   min-height: inherit;
   padding: 0;
   margin: 0;
+  border: 1px dashed green;
 
   @media only screen and (max-width:$phone) {
     width: 100%;
