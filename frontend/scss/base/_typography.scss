@@ -13,10 +13,26 @@ h2 {
 h3 {
   color: $grey-darken;
   line-height: 3.2rem;
+  text-transform: capitalize;
 }
 
 p {
   color: $grey;
   line-height: 2.3rem;
   margin-top: 2.3rem;
+}
+
+a:link,
+a:visited {
+  font-family: Lato;
+  font-weight: bold;
+  line-height: 2.1rem;
+  font-size: 1.6rem;
+  color: $color-main;
+  text-decoration: none;
+}
+
+::selection {
+  background-color: $color-main;
+  color: $grey-light;
 }

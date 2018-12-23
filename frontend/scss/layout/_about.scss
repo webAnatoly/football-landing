@@ -1,4 +1,12 @@
 .about {
   min-height: 59.2rem;
   background-color: $grey-light;
+  background-image: url('./../img/players.png');
+  background-repeat: no-repeat;
+
+  &__flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

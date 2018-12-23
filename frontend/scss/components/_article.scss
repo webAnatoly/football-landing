@@ -1,0 +1,13 @@
+.article {
+  border: 1px solid red;
+  padding: 3.35rem .5rem;
+  width: 40.7rem;
+
+  & h3 {
+    margin-top: 2.7rem;
+  }
+
+  & p {
+    margin: 1.35rem auto;
+  }
+}
