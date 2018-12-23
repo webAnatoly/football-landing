@@ -1,0 +1,13 @@
+.get-up {
+  min-height: 48.3rem;
+  background-color: $color-bg-fourth;
+
+  &__store-buttons {
+    margin-top: 3.8rem;
+
+    @media (max-width: $tab-port) {
+      margin: 3.8rem auto;
+      width: 100%;
+    }
+  }
+}

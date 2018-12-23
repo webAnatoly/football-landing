@@ -1,0 +1,20 @@
+.logo {
+  width: 9.9rem;
+  height: 3.2rem;
+
+  display: flex;
+  align-items: flex-end;
+
+  & img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &__text {
+    font-family: $font-family--second;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: -0.02em;
+    color: inherit;
+  }
+}

@@ -1,0 +1,22 @@
+body {
+  font-family: $font-family--main;
+  font-size: 1.6rem;
+}
+
+h2 {
+  color: $color-main;
+  text-transform: uppercase;
+  font-size: $font-size;
+  line-height: 2.1rem;
+}
+
+h3 {
+  color: $grey-darken;
+  line-height: 3.2rem;
+}
+
+p {
+  color: $grey;
+  line-height: 2.3rem;
+  margin-top: 2.3rem;
+}

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en"><!-- Set a lang="" -->
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Tell mobile browsers to use the device's width and scale -->
   <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Tell Internet Explorer to use the most current layout engine available READ: https://www.modern.ie/en-us/performance/how-to-use-x-ua-compatible -->
 
-  <!-- <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
 
   <link rel="stylesheet" href="css/main.css">
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
-  <title>Set title</title><!-- Specify web page title -->
+  <title>Mobile App</title><!-- Specify web page title -->
 
   <!-- Specify the web page description -->
   <meta name="description" content="">
@@ -25,37 +25,74 @@
 </head>
 <body>
 
-<header class="container header">
-
+<header class="container header responsive-padding">
+  <div class="row">
+    <div class="col-7">
+      <div class="logo header__logo">
+        <div class="logo__img"><img src="./img/football.svg" alt="football picture"></div>
+        <div class="logo__text">Sports</div>
+      </div>
+      <div class="header__slogan">
+        Get a personalized football experience tailored just for you
+      </div>
+      <p class="header__p">
+        Achieve super-fan status by getting tailored updates and up-to-the-minute information on your team.
+      </p>
+      <div class="store-buttons header__store-buttons">
+        <div class="store-buttons__img-wrapper"><img src="./img/apple-store.svg" alt="Apple Store Button"></div>
+        <div class="store-buttons__img-wrapper"><img src="./img/google-play.svg" alt="Google Play Button"></div>
+      </div>
+    </div>
+    <div class="col-5 hide-mobile">cell</div>
+  </div>
+  <div class="header__decorator"></div>
+  <img class="header__bg-img" src="./img/bg-phones.png" alt="background picture">
 </header>
-<section class="container">
+<section class="container about responsive-padding">
   <div class="row">
     <div class="col-6">cell</div>
     <div class="col-6">cell</div>
   </div>
 </section>
-<section class="container">
+<section class="container get-started responsive-padding">
   <div class="row">
-    <div class="col-6">cell</div>
+    <div class="col-6">cell Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nostrum hic architecto ducimus enim officiis dignissimos facere a tempora dolore. Unde, ea fugit? Vitae at accusantium odio odit id obcaecati possimus, quia, laudantium dolor tempora officia ullam? Cum, maxime! Blanditiis, libero optio. Deleniti ipsum quibusdam tempore iure maxime molestias totam, consequuntur sapiente perspiciatis culpa dicta dolorum libero quas architecto deserunt, voluptatem natus sit reiciendis numquam cum.</div>
     <div class="col-6">cell</div>
   </div>
 </section>
-<section class="container">
+<section class="container features responsive-padding">
   <div class="row">
-    <div class="col-6">cell</div>
-    <div class="col-6">cell</div>
+    <div class="col-4">cell</div>
+    <div class="col-4">cell</div>
+    <div class="col-4">cell</div>
   </div>
 </section>
-<section class="container"></section>
-<section class="container"></section>
-<section class="container">
+<section class="container opinions">opinions</section>
+<section class="container tv responsive-padding">tv</section>
+<section class="container get-up responsive-padding">
   <div class="row">
     <div class="col-6">cell</div>
-    <div class="col-6">cell</div>
+    <div class="col-6">
+      <h3>
+        Get Up Close With Your Team
+      </h3>
+      <div class="get-up__p">
+        If you’re interested in the scores of more than one team (it’s OK, we won’t tell your mates you support two clubs!),
+        you can choose the scores and competitions that matter to you using the ‘My Scores’ section. So, make sure you’re a
+        top-flight football fan by downloading the Football Score Centre now. It’s got all this:
+      </div>
+      <div class="store-buttons get-up__store-buttons">
+        <div class="store-buttons__img-wrapper"><img src="./img/apple-store.svg" alt="Apple Store Button"></div>
+        <div class="store-buttons__img-wrapper"><img src="./img/google-play.svg" alt="Google Play Button"></div>
+      </div>
+    </div>
   </div>
 </section>
-<footer class="container footer">
-
+<footer class="container footer responsive-padding">
+  <div class="logo footer__logo">
+    <div class="logo__img"><img src="./img/football-2.svg" alt="football picture"></div>
+    <div class="logo__text">Sports</div>
+  </div>
 </footer>
 
   <!-- удалить и начать верстать  -->

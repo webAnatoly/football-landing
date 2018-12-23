@@ -1,3 +1,30 @@
+// COLORS
+$grey-light:  #FFFFFF;
+$grey:        #4F4F4F;
+$grey-darken: #333333;
+
+$color-bg:       #E5E5E5;
+$color-bg-second:#F4F6F9;
+$color-bg-third: #FAFAFA;
+$color-bg-fourth:#E5E5E5;
+$color-main:     #00ADEE;
+$color-second:   #5282F0;
+
+
+// FONTS
+$font-family--main: 'Lato', sans-serif;
+$font-family--second: 'Montserrat', sans-serif;
+
+$font-size--small:  1.4rem;
+$font-size:         1.6rem;
+$font-size--medium: 1.8rem;
+$font-size--big:    2.4rem;
+$font-size--bigger: 3.6rem;
+$font-size--biggest: 4.8rem;
+
+$font-size--h2:     2.8rem;
+
+
 // GRID
 /* Breakpoints
   0 - 600px:      Phone
@@ -21,3 +48,5 @@ $gutter-horizontal-none: 0;
 
 // SPACES
 $space: 16.2rem;
+$space-medium: 8rem;
+$space-small: 2rem;

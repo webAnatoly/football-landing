@@ -1,0 +1,11 @@
+.footer {
+  min-height: 12.7rem;
+  background: #00ADEE;
+  color: $grey-light;
+
+  & .logo {
+    // color: $grey-light;
+    top: 1rem;
+    left: 44rem;
+  }
+}
