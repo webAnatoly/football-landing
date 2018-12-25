@@ -1,0 +1,49 @@
+.informer {
+  position: relative;
+  width: 36rem;
+  height: 21.806rem;
+  border: 2px solid blue;
+  padding: 0 1.469rem 0 1.574rem;
+
+  &__date {
+    color: $grey;
+    font-size: 1.67833rem;
+    font-weight: bold;
+    line-height: 2.2rem;
+    margin-top: 2.26rem;
+  }
+
+  &__teams {
+    margin-top: 1.258rem;
+
+    & p.informer__team {
+      font-weight: 500;
+      line-height: 2.4rem;
+      font-size: $font-size--medium;
+      color: $dark;
+      margin: 0;
+    }
+
+  }
+
+  &__status {
+    font-weight: normal;
+    line-height: 2.1rem;
+    font-size: $font-size;
+    color: $dark;
+    margin-top: 1.363rem;
+  }
+
+  &__row {
+    background-color: $grey-light-2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4.927rem;
+    padding: 1rem 2.624rem 1rem 1.574rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
