@@ -2,8 +2,16 @@
   position: relative;
   width: 36rem;
   height: 21.806rem;
-  border: 2px solid blue;
   padding: 0 1.469rem 0 1.574rem;
+  background: $grey-light;
+  box-shadow: -2.20416rem 2.38785rem 4.89814rem rgba(0, 0, 0, 0.5);
+  border-radius: .4rem;
+  color: $grey;
+
+  @media (max-width: $phone) {
+    width: 24.721rem;
+    height: 14.958rem;
+  }
 
   &__date {
     color: $grey;
@@ -11,10 +19,20 @@
     font-weight: bold;
     line-height: 2.2rem;
     margin-top: 2.26rem;
+
+    @media (max-width: $phone) {
+      font-size: 1.15188rem;
+      line-height: 1.5rem;
+      margin-top: 1.87rem;
+    }
   }
 
   &__teams {
     margin-top: 1.258rem;
+
+    @media (max-width: $phone) {
+      margin-top: .863rem;
+    }
 
     & p.informer__team {
       font-weight: 500;
@@ -22,6 +40,11 @@
       font-size: $font-size--medium;
       color: $dark;
       margin: 0;
+
+      @media (max-width: $phone) {
+        line-height: 1.6rem;
+        font-size: 1.23539rem;
+      }
     }
 
   }
@@ -32,6 +55,12 @@
     font-size: $font-size;
     color: $dark;
     margin-top: 1.363rem;
+
+    @media (max-width: $phone) {
+      margin-top: .935rem;
+      line-height: 1.4rem;
+      font-size: 1.09812rem;
+    }
   }
 
   &__row {
@@ -45,5 +74,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $phone) {
+      height: 3.38rem;
+
+      &__text {
+        line-height: 1.7rem;
+        font-size: 1.29587rem;
+      }
+    }
   }
 }

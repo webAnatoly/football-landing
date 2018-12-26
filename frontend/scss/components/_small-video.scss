@@ -1,5 +1,12 @@
 .small-video {
+  display: block;
   width: 36rem;
   height: 21.827rem;
+  border-radius: .4rem;
   border: 2px solid blue;
+
+  @media (max-width: $phone) {
+    width: 24.721rem;
+    height: 14.973rem;
+  }
 }

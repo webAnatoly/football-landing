@@ -3,6 +3,10 @@
   padding: 3.35rem .5rem;
   width: 40.7rem;
 
+  @media (max-width: $phone) {
+    text-align: center;
+  }
+
   & h3 {
     margin-top: 2.7rem;
   }

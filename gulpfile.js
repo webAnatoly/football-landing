@@ -11,7 +11,9 @@ const gulp = require('gulp'),
       gulpIf = require('gulp-if'),
       // debug = require('gulp-debug'),
       notify = require('gulp-notify'),
-      multipipe = require('multipipe');
+      multipipe = require('multipipe'),
+      pump = require('pump'),
+      minify = require('gulp-minify');
 
 const isDevelopment = !process.env.NODE_ENV || process.env.NODE_ENV == 'development'; // NODE_ENV=production gulp build
 
@@ -49,15 +51,26 @@ gulp.task('html', () => {
     .pipe(gulp.dest('public'));
 })
 
+gulp.task('js', function (cb) {
+  pump([
+      gulp.src('frontend/js/**/*.js'),
+      minify(),
+      gulp.dest('public/js')
+    ],
+    cb
+  );
+});
+
 gulp.task('build', gulp.series(
   'clean',
-  gulp.parallel('styles', 'assets', 'html'))
+  gulp.parallel('styles', 'assets', 'html', 'js'))
 );
 
 gulp.task('watch', () => {
   gulp.watch('frontend/scss/**/*.*', gulp.series('styles'));
   gulp.watch('frontend/img/**/*.*', gulp.series('assets'));
   gulp.watch('frontend/**/*.html', gulp.series('html'));
+  gulp.watch('frontend/**/*.js', gulp.series('js'));
 });
 
 gulp.task('serve', () => {

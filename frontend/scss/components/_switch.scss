@@ -5,6 +5,11 @@
   border-radius: 10rem;
   background-color: $grey-light-3;
 
+  @media (max-width: $phone) {
+    width: 1.874rem;
+    height: .863rem;
+  }
+
   &__checkbox {
     position: relative;
     width: 100%;
@@ -24,19 +29,24 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: -1px;
+      left: -5px;
       width: 2.099rem;
       height: 2.097rem;
       background-color: $grey-light;
       border-radius: 50%;
       transition: 0.2s ease all;
       z-index: 2;
+
+      @media (max-width: $phone) {
+        width: 1.441rem;
+        height: 1.438rem;
+      }
     }
   }
 
   &__checkbox:checked + &__knobs::before {
-    left: 100%;
-    transform: translate(-100%, -48%);
+    left: 120%;
+    transform: translate(-100%, -50%);
   }
 
   &__layer {
@@ -49,6 +59,11 @@
     border-radius: 10rem;
     transition: 0.3s ease all;
     z-index: 1;
+
+    @media (max-width: $phone) {
+      width: 1.874rem;
+      height: .863rem;
+    }
   }
 
   &__checkbox:checked + &__knobs + &__layer {

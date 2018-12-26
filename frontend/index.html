@@ -49,23 +49,29 @@
 <section class="container about responsive-padding">
   <div class="row">
     <div class="col-7">
-      <div class="informer">
-        <p class="informer__date">Sat, 12:35pm</p>
-        <div class="informer__teams">
-          <p class="informer__team">Arsenal <span>v</span></p>
-          <p class="informer__team">Chelsea</p>
-        </div>
-        <p class="informer__status">Friendly Match</p>
-        <div class="informer__row">
-          <div>Turn on all match notifications</div>
-          <div class="switch">
-            <input type="checkbox" class="switch__checkbox">
-            <div class="switch__knobs"></div>
-            <div class="switch__layer"></div>
+      <div class="about__container">
+        <div class="informer about__informer">
+          <p class="informer__date">Sat, 12:35pm</p>
+          <div class="informer__teams">
+            <p class="informer__team">Arsenal <span>v</span></p>
+            <p class="informer__team">Chelsea</p>
+          </div>
+          <p class="informer__status">Friendly Match</p>
+          <div class="informer__row">
+            <div class="informer__row__text">Turn on all match notifications</div>
+            <div class="switch">
+              <input type="checkbox" class="switch__checkbox">
+              <div class="switch__knobs"></div>
+              <div class="switch__layer"></div>
+            </div>
           </div>
         </div>
+        <!-- <iframe class="small-video about__small-video" src="https://www.youtube.com/embed/CYU0h6pCrxA" allowfullscreen></iframe> -->
+        <!-- The <iframe> (and video player) will replace this <div> tag. -->
+        <div id="video-frame">
+          <div id="player" class="small-video about__small-video"></div>
+        </div>
       </div>
-      <video src="" class="small-video"></video>
     </div>
     <div class="col-5 about__flex">
       <article class="article">
@@ -156,5 +162,6 @@
       <div class="col-2"></div>
     </div>
   </section> -->
+<!-- <script src="./js/main-min.js"></script> -->
 </body>
 </html>
