@@ -3,9 +3,11 @@
   background-color: $grey-light;
   background-image: url('./../img/players.png');
   background-repeat: no-repeat;
+  background-size: auto 59.2rem;
 
   @media (max-width: $phone) {
     background-image: none;
+    min-height: 38.8rem;
   }
 
   &__flex {
@@ -22,10 +24,23 @@
     }
   }
 
+  &__article {
+
+    @media (max-width: $phone) {
+      padding-top: 5.4rem;
+      padding-bottom: 2.2rem;
+    }
+  }
+
   &__container {
     position: relative;
-    border: 1px solid lightblue;
     width: 100%;
+    height: 100%;
+
+    @media (max-width: $phone) {
+      background-image: url('./../img/players-m.png');
+      background-repeat: no-repeat;
+    }
   }
 
   &__informer {
@@ -42,12 +57,14 @@
   &__small-video {
     position: absolute;
     top: 29.6rem;
-    left: 10.6rem;
+    // left: 10.6rem;
+    right: 10rem;
     z-index: 1;
 
     @media (max-width: $phone) {
       top: 19.827rem;
-      left: 15vw;
+      // left: 0;
+      right: 0;
     }
 
     &:focus {

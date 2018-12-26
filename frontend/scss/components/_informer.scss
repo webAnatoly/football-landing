@@ -7,6 +7,7 @@
   box-shadow: -2.20416rem 2.38785rem 4.89814rem rgba(0, 0, 0, 0.5);
   border-radius: .4rem;
   color: $grey;
+  overflow: auto;
 
   @media (max-width: $phone) {
     width: 24.721rem;
@@ -60,6 +61,44 @@
       margin-top: .935rem;
       line-height: 1.4rem;
       font-size: 1.09812rem;
+    }
+  }
+
+  &__img-holder {
+    position: absolute;
+    width: 8.387rem;
+    height: 8.397rem;
+    top: 4.613rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $phone) {
+      width: 5rem;
+      height: 5rem;
+      top: 3rem;
+    }
+
+    & img {
+      height: 100%;
+    }
+
+    &--1 {
+      left: 20.257rem;
+      z-index: 1;
+
+      @media (max-width: $phone) {
+        left: 15rem;
+      }
+    }
+    &--2 {
+      left: 26.134rem;
+      z-index: 2;
+
+      @media (max-width: $phone) {
+        left: 19rem;
+      }
     }
   }
 
