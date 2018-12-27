@@ -11,9 +11,18 @@
   }
 
   &__flex {
+    padding-top: 10.9rem; 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+
+    @media (max-width: $tab-port) {
+      padding-top: 7rem;
+    }
+    @media (max-width: $phone) {
+      padding-top: 4.05rem; // 5.4 - 1.35 = 4.05
+      padding-bottom: .85rem; // 2.2 - 1.35 = 0.85 
+    }
   }
 
   & .row {
@@ -24,22 +33,15 @@
     }
   }
 
-  &__article {
-
-    @media (max-width: $phone) {
-      padding-top: 5.4rem;
-      padding-bottom: 2.2rem;
-    }
-  }
-
   &__container {
     position: relative;
     width: 100%;
-    height: 100%;
+    min-height: 40rem;
 
     @media (max-width: $phone) {
       background-image: url('./../img/players-m.png');
       background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
@@ -49,22 +51,23 @@
     left: 0;
     z-index: 2;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       top: 7rem;
+      left: 47%;
+      transform: translateX(-50%);
     }
   }
 
   &__small-video {
     position: absolute;
     top: 29.6rem;
-    // left: 10.6rem;
-    right: 10rem;
+    left: 10.6rem;
     z-index: 1;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       top: 19.827rem;
-      // left: 0;
-      right: 0;
+      left: 52%;
+      transform: translateX(-50%);
     }
 
     &:focus {

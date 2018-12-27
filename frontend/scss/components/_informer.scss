@@ -9,9 +9,10 @@
   color: $grey;
   overflow: auto;
 
-  @media (max-width: $phone) {
+  @media (max-width: $tab-port) {
     width: 24.721rem;
     height: 14.958rem;
+    box-shadow: -15.1278px 16.3884px 33.6173px rgba(0, 0, 0, 0.5);
   }
 
   &__date {
@@ -21,7 +22,7 @@
     line-height: 2.2rem;
     margin-top: 2.26rem;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       font-size: 1.15188rem;
       line-height: 1.5rem;
       margin-top: 1.87rem;
@@ -31,7 +32,7 @@
   &__teams {
     margin-top: 1.258rem;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       margin-top: .863rem;
     }
 
@@ -42,7 +43,7 @@
       color: $dark;
       margin: 0;
 
-      @media (max-width: $phone) {
+      @media (max-width: $tab-port) {
         line-height: 1.6rem;
         font-size: 1.23539rem;
       }
@@ -57,7 +58,7 @@
     color: $dark;
     margin-top: 1.363rem;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       margin-top: .935rem;
       line-height: 1.4rem;
       font-size: 1.09812rem;
@@ -74,7 +75,7 @@
     justify-content: center;
     align-items: center;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       width: 5rem;
       height: 5rem;
       top: 3rem;
@@ -88,7 +89,7 @@
       left: 20.257rem;
       z-index: 1;
 
-      @media (max-width: $phone) {
+      @media (max-width: $tab-port) {
         left: 15rem;
       }
     }
@@ -96,7 +97,7 @@
       left: 26.134rem;
       z-index: 2;
 
-      @media (max-width: $phone) {
+      @media (max-width: $tab-port) {
         left: 19rem;
       }
     }
@@ -114,7 +115,7 @@
     justify-content: space-between;
     align-items: center;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       height: 3.38rem;
 
       &__text {

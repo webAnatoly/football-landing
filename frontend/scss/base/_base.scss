@@ -9,6 +9,9 @@
 html {
   font-size: 62.5%; // This defines what 1rem is
 
+  @media (max-width: $tab-land) {
+    font-size: 58%;
+  }
   // @media (max-width: $phone) {
   //   font-size: 50%;
   // }

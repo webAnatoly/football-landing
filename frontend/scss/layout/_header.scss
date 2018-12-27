@@ -10,6 +10,7 @@
 
   @media (max-width: $phone) {
     background-image: none;
+    min-height: 22.8rem;
   }
 
   &__logo {
@@ -54,6 +55,6 @@
   }
 
   &__store-buttons {
-    margin: 5rem 0;
+    margin: 5.9rem 0;
   }
 }

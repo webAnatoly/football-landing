@@ -2,12 +2,13 @@
   display: block;
   width: 36rem;
   height: 21.827rem;
+  // border-radius: .274531rem;
   border-radius: .274531rem;
   box-shadow: -2.20416rem 2.38785rem 4.89814rem rgba(0, 0, 0, 0.5);
-  border: 2px solid blue;
 
-  @media (max-width: $phone) {
+  @media (max-width: $tab-port) {
     width: 24.721rem;
     height: 14.973rem;
+    box-shadow: -15.1278px 16.3884px 33.6173px rgba(0, 0, 0, 0.5);
   }
 }
