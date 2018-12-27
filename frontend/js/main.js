@@ -1,29 +1,16 @@
-let videoFrame = document.querySelector('#video-frame');
-function checkFocus(element) {
-  let focused = false;
-  if (document.activeElement === element) {
-    focused = true;
+const videoWrapper = document.querySelector('#video-wrapper');
+
+// уменьшить z-index если клик не на плеере
+document.addEventListener('click', function() {
+  if (document.activeElement !== document.querySelector("iframe#player")) {
+    videoWrapper.classList.remove('big-zindex');
   }
-  return focused;
-}
+});
 
-// window.setInterval(handler, 100);
-
-// document.addEventListener('click', function() {
-//   if (checkFocus(iframe)) {
-//     setZindex(iframe, 10);
-//   } else {
-//     setZindex(iframe, 1);
-//   }
+// плеер на передний план если курсор над ним
+// videoWrapper.addEventListener('mouseover', function() {
+//   videoWrapper.classList.add('big-zindex');
 // });
-// iframe.addEventListener('mouseover', function() {
-//   if (checkFocus(iframe)) {
-//     setZindex(iframe, 10);
-//   } else {
-//     setZindex(iframe, 1);
-//   }
-// });
-
 
 
 // 1. This code loads the IFrame Player API code asynchronously.
@@ -51,18 +38,12 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
-  // event.target.playVideo();
+  return true;
 }
 
+// Видео на первый план, если нажали "play"
 function onPlayerStateChange(event) {
   if (event.data == 1 || event.data == 2) {
-    console.log(videoFrame.classList);
-    videoFrame.classList.add('big-zindex');
-    console.log(videoFrame.classList);
-    // videoFrame.style.zIndex = '999';
+    videoWrapper.classList.add('big-zindex');
   }
-}
-
-function stopVideo() {
-  player.stopVideo();
 }
