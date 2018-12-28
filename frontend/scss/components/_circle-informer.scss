@@ -15,6 +15,15 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & svg.icon {
+      display: block;
+      width: 3.8rem;
+      height: 4.6rem;
+    }
 
     &__counter {
       display: flex;

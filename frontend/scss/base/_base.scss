@@ -56,3 +56,10 @@ body {
   position: relative;
   z-index: 999;
 }
+
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}
