@@ -8,6 +8,14 @@
   inset -6.73495px -19.5926px 24.4907px $grey-light,
   inset 4.89814px -2.44907px 8.57175px $grey-light-21;
 
+  @media (max-width: $tab-port) {
+    width: 20.292rem;
+    height: 41.151rem;
+    box-shadow: -17.3985px 18.8483px 38.6632px rgba(0, 0, 0, 0.5),
+    inset -5.3162px -15.4653px 19.3316px $grey-light,
+    inset 3.86632px -1.93316px 6.76607px $grey-light-21;
+  }
+
   &__front {
     position: absolute;
     top: 3.364rem;
@@ -40,7 +48,7 @@
 
   &__btns {
     position: absolute;
-    top: 12rem;
+    top: 23%;
     left: -2.82px;
     width: 2.82px;
     height: 12.588rem;
@@ -70,6 +78,14 @@
     top: 6.119rem;
     transform: translateX(-50%);
     overflow: hidden;
+    background-color: $grey-light;
+    box-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+
+    @media (max-width: $tab-port) {
+      width: 17.603rem;
+      height: 31.214rem;
+    }
 
     & img {
       width: 100%;
