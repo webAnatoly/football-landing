@@ -1,0 +1,78 @@
+.mobile-phone {
+  position: relative;
+  width: 25.412rem;
+  height: 51.3rem;
+  background-color: $color-bg-second;
+  border-radius: 1.5rem;
+  box-shadow: -22.0416px 23.8785px 48.9814px rgba(0, 0, 0, 0.5),
+  inset -6.73495px -19.5926px 24.4907px $grey-light,
+  inset 4.89814px -2.44907px 8.57175px $grey-light-21;
+
+  &__front {
+    position: absolute;
+    top: 3.364rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6.81rem;
+    height: .897rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__mic {
+      width: 4.661rem; 
+      height: .897rem;
+      background-color: $color-bg-fifth;
+      box-shadow: inset 0px -0.612268px 0.612268px $grey-light,
+      inset 0px 0.612268px 0.306134px rgba(0, 0, 0, 0.381058);
+      border-radius: 4.2px;
+    }
+
+    &__camera {
+      width: .737rem;
+      height: .733rem;
+      background-color: $color-bg-fifth;
+      box-shadow: inset 0px -0.612268px 0.612268px $grey-light,
+      inset 0px 0.612268px 0.612268px;
+      border-radius: 4.2px;
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    top: 12rem;
+    left: -2.82px;
+    width: 2.82px;
+    height: 12.588rem;
+
+    &__btn-1,
+    &__btn-2 {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      background-color: $color-bg-second;
+      width: 100%;
+    }
+
+    &__btn-1 {
+      height: 3.359rem;
+      margin-bottom: .5rem;
+    }
+    &__btn-2 {
+      height: 8.209rem;
+    }
+  }
+
+  &__screen {
+    position: absolute;
+    width: 22.294rem;
+    height: 39.557rem;
+    left: 50%;
+    top: 6.119rem;
+    transform: translateX(-50%);
+    overflow: hidden;
+
+    & img {
+      width: 100%;
+    }
+  }
+}

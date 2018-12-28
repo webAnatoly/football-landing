@@ -1,4 +1,89 @@
 .get-started {
   min-height: 71.6rem;
   background-color: $grey-light;
+
+  &__article {
+    margin-top: 20.3499rem; // 21.7 - 1.35 = 20.3499
+    width: 47.5rem;
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
+    height: 71.6rem;
+    transform: translateX(4rem);
+  }
+
+  &__mobile-phone {
+    position: absolute;
+    top: 10.4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+  }
+
+  &__circle {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    &--outer {
+      opacity: 0.15;
+    }
+  }
 }
+
+// $outer-size: 400px;
+// $inner-size: 200px;
+// $stroke-width: 2px;
+// $stroke-dasharray: 16px;
+
+// circle {
+//   stroke: black;
+//   fill: transparent;
+// }
+
+// .wrapper {
+//   position: relative;
+//   width: 400px;
+//   height: 400px;
+// }
+
+// .svg {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+
+//   &_outer {
+//     width: $outer-size;
+//     height: $outer-size;
+//     margin-left: - ($outer-size / 2);
+//     margin-top: - ($outer-size / 2);
+
+//     circle {
+//       r: ($outer-size / 2) - ($stroke-width / 2);
+//       cx: $outer-size / 2;
+//       cy: $outer-size / 2;
+//     }
+//   }
+
+//   &_inner {
+//     width: $inner-size;
+//     height: $inner-size;
+//     margin-left: - ($inner-size / 2);
+//     margin-top: - ($inner-size / 2);
+
+//     circle {
+//       r: ($inner-size / 2) - ($stroke-width / 2);
+//       cx: $inner-size / 2;
+//       cy: $inner-size / 2;
+//     }
+//   }
+
+//   circle {
+//     stroke-width: $stroke-width;
+//     stroke-dasharray: $stroke-dasharray;
+//   }
+// }
