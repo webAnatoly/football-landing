@@ -31,14 +31,16 @@
     position: relative;
     height: 71.6rem;
     transform: translateX(4rem);
-    border: 3px solid lightblue;
 
     @media (max-width: $tab-port) {
       height: 60rem;
+      width: 35rem;
     }
 
     @media (max-width: $phone) {
-      transform: translateX(0);
+      left: 50%;
+      border: 3px solid lightblue;
+      transform: translateX(-50%);
     }
 
     & .get-started__mobile-phone {
@@ -69,20 +71,17 @@
       &--small {
         width: 40rem;
         height: 40rem;
-        border: 1px solid red;
       }
 
       &--medium {
         width: 60rem;
         height: 60rem;
-        border: 1px solid red;
       }
 
       &--outer {
         opacity: .15;
         width: 80rem;
         height: 80rem;
-        border: 1px solid red;
       }
     }
 
@@ -91,12 +90,22 @@
       top: 14.5rem;
       left: 11rem;
       z-index: 10;
+
+      @media (max-width: $tab-port) {
+        top: 8rem;
+        left: 4rem;
+      }
     }
     &__informer-rounded-2 {
       position: absolute;
       top: 45rem;
       left: 36rem;
       z-index: 10;
+
+      @media (max-width: $tab-port) {
+        top: 42rem;
+        left: 24rem;
+      }
     }
 
     & .get-started__small-circle {
@@ -110,6 +119,10 @@
       top: 50.5rem;
       left: 1rem;
       z-index: 10;
+
+      @media (max-width:$tab-land) {
+        display: none;
+      }
 
       &::after {
         content:'';
