@@ -8,6 +8,8 @@
 
 html {
   font-size: 62.5%; // This defines what 1rem is
+  box-sizing: border-box;
+  width: 100%;
 
   @media (max-width: $tab-land) {
     font-size: 58%;
@@ -18,9 +20,9 @@ html {
 }
 
 body {
-  box-sizing: border-box;
   font-size: 1.6rem;
   background-color: $grey-light;
+  width: 100%;
 }
 
 .container {
