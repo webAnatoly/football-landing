@@ -14,4 +14,42 @@
     text-align: center;
     margin-bottom: 5.4rem;
   }
+
+  & div.row {
+    min-height: 14.4rem;
+  }
+
+  & div[class*="col-4"]{
+    width: 31.1rem;
+    margin-bottom: 4.5rem;
+  }
+
+  &__article {
+
+    & ul {
+      // list-style-position: inside;
+      // list-style-image: url('./../img/marker.svg');
+      list-style-type: none;
+      padding: 0;
+      font-family: $font-family--main;
+      line-height: 2.3rem;
+      font-size: 1.6rem;
+      color: $grey-light;
+
+      & li {
+        position: relative;
+
+        &::before {
+          display: inline-block;
+          position: relative;
+          content: "";
+          width: 8px;
+          height: 8px;
+          background: $grey-light;
+          border-radius: 1.6rem;
+          margin-right: 3px;
+        }
+      }
+    }
+  }
 }
