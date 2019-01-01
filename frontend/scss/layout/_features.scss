@@ -26,9 +26,19 @@
 
   &__article {
 
-    & ul {
-      // list-style-position: inside;
-      // list-style-image: url('./../img/marker.svg');
+    &__icon-holder {
+      width: 4rem;
+      height: 4rem;
+      margin-bottom: 1.1rem;
+
+      .svg-icon {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    ul {
+
       list-style-type: none;
       padding: 0;
       font-family: $font-family--main;
@@ -36,7 +46,7 @@
       font-size: 1.6rem;
       color: $grey-light;
 
-      & li {
+      li {
         position: relative;
 
         &::before {
