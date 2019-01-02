@@ -1,8 +1,12 @@
 .features {
   min-height: 73.5rem;
   background: $color-main url('./../img/bg-blue.svg') no-repeat left top / cover;
-  // padding: 7.6rem auto auto 6.6rem;
-  padding: 7.6rem 16.4rem 6.6rem;
+  color: $grey-light;
+
+  @media (max-width: $phone) {
+    background: $grey-light;
+    color: $color-main;
+  }
 
   &__h3 {
     font-family: $font-family--main;
@@ -10,42 +14,72 @@
     font-weight: bold;
     line-height: 3.7rem;
     font-size: 2.8rem;
-    color: $grey-light;
+    color: inherit;
     text-align: center;
-    margin-bottom: 5.4rem;
+    margin: 7.6rem auto 5.4rem;
   }
 
   & div.row {
-    min-height: 14.4rem;
-  }
-
-  & div[class*="col-4"]{
-    width: 31.1rem;
+    min-height: 12rem;
     margin-bottom: 4.5rem;
+    border: 3px solid green;
+
+    @media (max-width: $phone) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 6.6rem;
+
+      @media (max-width: $phone) {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__article {
+    min-height: 12rem;
+    width: 31.1rem;
+    margin: auto;
+    padding: 0 .5rem;
+
+    @media (max-width: $tab-land) {
+      padding: 0 1rem;
+      width: 100%;
+    }
+    @media (max-width: $phone) {
+      padding: .5rem 1rem;
+      margin-bottom: 4rem;
+      width: 100%;
+      text-align: center;
+    }
 
     &__icon-holder {
       width: 4rem;
       height: 4rem;
       margin-bottom: 1.1rem;
 
+      @media (max-width: $phone) {
+        margin: auto;
+      }
+
       .svg-icon {
         width: 4rem;
         height: 4rem;
         fill: $grey-light;
+
+        @media (max-width: $phone) {
+          fill: $color-main;
+        }
       }
     }
 
     ul {
-
       list-style-type: none;
       padding: 0;
       font-family: $font-family--main;
       line-height: 2.3rem;
       font-size: 1.6rem;
-      color: $grey-light;
 
       li {
         position: relative;
