@@ -1,0 +1,49 @@
+.button-1 {
+  position: relative;
+  width: 4.7rem;
+  height: 4.7rem;
+  border: 1px solid $color-main;
+  border-radius: 4.7rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1),
+  0px 10px 10px rgba(0, 0, 0, 0.25);
+
+  &::before,
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 1rem;
+    height: 2px;
+    background: $color-main;
+    top: 47%;
+    left: 40%;
+  }
+
+  &::before {
+    transform-origin: bottom left;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    transform-origin: top left;
+    transform: rotate(45deg);
+  }
+
+  &--right {
+    &::before,
+    &::after {
+      top:50%;
+      left:37%;
+    }
+
+    &::before {
+      transform-origin: top right;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform-origin: bottom right;
+      transform: rotate(45deg);
+    }
+  }
+}
