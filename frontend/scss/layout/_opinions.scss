@@ -1,4 +1,13 @@
 .opinions {
   height: 43.1rem;
   background-color: $grey-light;
+
+  &__h3 {
+    font-weight: bold;
+    line-height: 3.7rem;
+    font-size: 2.8rem;
+    color: $grey-darken;
+    margin: 6.3rem auto;
+    text-align: center;
+  }
 }

@@ -1,0 +1,60 @@
+.carousel {
+  position: relative;
+  border: 3px solid red;
+  width: 100%;
+  max-width: 144rem;
+  height: 26.9rem;
+  overflow: hidden;
+
+  .carousel__btn--left,
+  .carousel__btn--right {
+    position: absolute;
+    top: 6.5rem;
+    z-index: 999;
+  }
+
+  .carousel__btn--left {
+    left: 3.5%;
+  }
+
+  .carousel__btn--right {
+    right: 3.5%;
+  }
+
+  &__row {
+    position: relative;
+  }
+
+  &__row--main {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 20000rem;
+    height: 17rem;
+    border: 3px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel__card {
+      display: inline-block;
+
+      &:not(:last-child) {
+        margin-right: 3.6rem;
+      }
+    }
+
+    .carousel__card:first-child,
+    .carousel__card:last-child {
+      opacity: .2;
+    }
+  }
+  &__row--indicators {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: 9rem;
+    border: 3px solid gold;
+  }
+}
