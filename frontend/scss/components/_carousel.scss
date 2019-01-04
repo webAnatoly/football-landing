@@ -31,7 +31,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 16rem;
+    width: 14rem;
     height: 16.1rem;
     background: $grey-light;
     opacity: .8;
@@ -58,11 +58,12 @@
     /* remove white-space between inline-block'ed li */
     /* http://davidwalsh.name/remove-whitespace-inline-block */
     font-size: 0;
-    transform: translateX(16rem);
+    // transform: translateX(16rem);
   }
 
   & li {
     display: inline-block;
+    position: relative;
 
     &:not(:last-child) {
       margin-right: 3.6rem;
@@ -74,6 +75,7 @@
     position: absolute;
     top: 6.5rem;
     z-index: 999;
+    cursor: pointer;
   }
 
   &__btn--left {
