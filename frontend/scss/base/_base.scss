@@ -14,9 +14,9 @@ html {
   @media (max-width: $tab-land) {
     font-size: 58%;
   }
-  // @media (max-width: $phone) {
-  //   font-size: 50%;
-  // }
+  @media (max-width: $phone) {
+    font-size: 50%;
+  }
 }
 
 body {

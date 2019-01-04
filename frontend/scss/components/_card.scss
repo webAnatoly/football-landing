@@ -8,7 +8,6 @@
   overflow: hidden;
 
   &__header {
-    border: 1px dashed red;
     display: flex;
     align-items: center;
 
@@ -17,6 +16,7 @@
       height: 3rem;
       border: 2px solid $color-main;
       border-radius: 3rem;
+      background: center / contain no-repeat url('./../img/person-placeholder.png');
     }
     &__name {
       display: block;
@@ -29,8 +29,8 @@
     &__icon {
       width: 1.5rem;
       height: 1.2rem;
-      border: 1px solid red;
       margin-left: auto;
+      background: center / contain no-repeat url('./../img/twitter.svg');
 
       & img {
         width: 100%;

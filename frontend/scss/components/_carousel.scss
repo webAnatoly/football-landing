@@ -6,55 +6,115 @@
   height: 26.9rem;
   overflow: hidden;
 
-  .carousel__btn--left,
-  .carousel__btn--right {
+  @media (max-width: $phone) {
+    height: 24rem;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 14rem;
+    height: 16.1rem;
+    background: $grey-light;
+    box-shadow: 10px 3px 30px white,
+    10px -3px 15px white;
+    opacity: .8;
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16rem;
+    height: 16.1rem;
+    background: $grey-light;
+    opacity: .8;
+    box-shadow: -30px 3px 30px white,
+    -30px -3px 15px white;
+    z-index: 1;
+  }
+
+  &__row {
+    position: relative;
+    border: 3px solid green;
+    min-height: 9.8rem;
+  }
+
+  & ul {
+    position: relative;
+    display: block;
+    height: 16.1rem;
+    width: 9999px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: margin-left 250ms;
+    /* remove white-space between inline-block'ed li */
+    /* http://davidwalsh.name/remove-whitespace-inline-block */
+    font-size: 0;
+    transform: translateX(16rem);
+  }
+
+  & li {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 3.6rem;
+    }
+  }
+
+  &__btn--left,
+  &__btn--right {
     position: absolute;
     top: 6.5rem;
     z-index: 999;
   }
 
-  .carousel__btn--left {
+  &__btn--left {
     left: 3.5%;
+
+    @media (max-width: $phone) {
+      display: none;
+    }
   }
 
-  .carousel__btn--right {
+  &__btn--right {
     right: 3.5%;
+
+    @media (max-width: $phone) {
+      opacity: .7;
+    }
   }
 
-  &__row {
-    position: relative;
-  }
-
-  &__row--main {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    min-width: 20000rem;
-    height: 17rem;
-    border: 3px solid green;
+  &__indicators {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    min-height: 9.8rem;
+    border: 3px solid gold;
 
-    .carousel__card {
+    @media (max-width: $phone) {
+      min-height: 7.4rem;
+    }
+
+    &__indicator {
       display: inline-block;
-
+      width: 1.1rem;
+      height: 1.1rem;
+      border-radius: 11px;
+      background: #828282;
+      
       &:not(:last-child) {
-        margin-right: 3.6rem;
+        margin-right: 1.1rem;
       }
     }
-
-    .carousel__card:first-child,
-    .carousel__card:last-child {
-      opacity: .2;
-    }
-  }
-  &__row--indicators {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-    height: 9rem;
-    border: 3px solid gold;
   }
 }
