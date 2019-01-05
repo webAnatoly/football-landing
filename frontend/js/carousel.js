@@ -1,8 +1,7 @@
 (function () {
   /* конфигурация */
-  var width = 30.9; // ширина изображения/карточки
-  var count = 2 // количество изображений/карточек для сдвига
-  var offset = 16.0 + 3.6; // отступ
+  var width = 34.5; // ширина слайда (ширина карточки 30.9 + margin-right 3.6)
+  var count = 3 // количество слайдов для сдвига
 
   var carousel = document.getElementById('carousel');
   var list = carousel.querySelector('.carousel ul');
@@ -13,7 +12,7 @@
   carousel.querySelector('.carousel__btn--left').onclick = function () {
     // сдвиг влево
     // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
-    position = Math.min(position + width * count, offset);
+    position = Math.min(position + width * count, 0);
     list.style.marginLeft = position + 'rem';
   };
 
@@ -26,8 +25,14 @@
 
   function changeParametres() {
     var screen = window.innerWidth;
-    if (screen < 600) {
+    if (screen < 800) {
+      position = 0;
       count = 1;
+      // сдвинуть весь ul таким образом, чтобы карточка оказалась по центру
+      var cardWidth = parseInt(getComputedStyle(document.querySelector('.card')).width);
+      list.style.transform = 'translateX(' + (screen - cardWidth)/2 + 'px)';
+    } else {
+      count = 3;
     }
   }
 

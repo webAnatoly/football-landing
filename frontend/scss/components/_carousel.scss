@@ -1,6 +1,6 @@
 .carousel {
   position: relative;
-  border: 3px solid red;
+  // border: 3px solid red;
   width: 100%;
   max-width: 144rem;
   height: 26.9rem;
@@ -50,7 +50,7 @@
 
   &__row {
     position: relative;
-    border: 3px solid green;
+    // border: 3px solid green;
     min-height: 9.8rem;
   }
 
@@ -68,7 +68,7 @@
     font-size: 0;
     transform: translateX(16rem);
     @media (max-width: $phone) {
-      transform: translateX(0);
+      transform: translateX(1.8rem);
     }
   }
 
@@ -93,7 +93,8 @@
     left: 3.5%;
 
     @media (max-width: $phone) {
-      display: none;
+      // display: none;
+      opacity: .5;
     }
   }
 
@@ -101,7 +102,7 @@
     right: 3.5%;
 
     @media (max-width: $phone) {
-      opacity: .7;
+      opacity: .5;
     }
   }
 
@@ -112,7 +113,7 @@
     align-items: center;
     padding: 2rem;
     min-height: 9.8rem;
-    border: 3px solid gold;
+    // border: 3px solid gold;
 
     @media (max-width: $phone) {
       min-height: 7.4rem;
