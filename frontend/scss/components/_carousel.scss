@@ -23,6 +23,10 @@
     10px -3px 15px white;
     opacity: .8;
     z-index: 1;
+
+    @media (max-width: $phone) {
+      display: none;
+    }
   }
 
   &::after {
@@ -38,6 +42,10 @@
     box-shadow: -30px 3px 30px white,
     -30px -3px 15px white;
     z-index: 1;
+
+    @media (max-width: $phone) {
+      display: none;
+    }
   }
 
   &__row {
@@ -58,7 +66,10 @@
     /* remove white-space between inline-block'ed li */
     /* http://davidwalsh.name/remove-whitespace-inline-block */
     font-size: 0;
-    // transform: translateX(16rem);
+    transform: translateX(16rem);
+    @media (max-width: $phone) {
+      transform: translateX(0);
+    }
   }
 
   & li {
