@@ -1,6 +1,10 @@
 .get-up {
   min-height: 48.3rem;
-  background-color: $color-bg-fourth;
+  background: url('./../img/bg-phones-2.png') no-repeat;
+
+  &__article {
+    margin-top: 6.45rem;
+  }
 
   &__store-buttons {
     margin-top: 3.8rem;
