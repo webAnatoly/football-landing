@@ -12,45 +12,21 @@
   }
 
   &__row {
-    border: 1px solid red;
-    // width: 108.1rem;
     width: 100%;
     min-height: 5.8rem;
     margin: 0 auto 6.8rem;
     font-size: 0;
     line-height: 0;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     
     @media (max-width: $tab-port) {
       flex-wrap: wrap;
+      margin: 0 auto 3.7rem;
     }
-
-    &__col {
-      display: inline-block;
-      width: 33.33333%;
-      height: 5.8rem;
-      border: 3px dashed green;
-      display: flex;
-      justify-content: space-between;
-
-      @media (max-width: $tab-port) {
-        width: 100%;
-
-        &:not(:last-child) {
-          justify-content: space-around;
-          margin-bottom: 3.3rem;
-        }
-      }
-      @media (max-width: $phone) {
-        width: 100%;
-
-        &:not(:last-child) {
-          justify-content: space-between;
-          margin-bottom: 3.3rem;
-        }
-      }
+    @media (max-width: $phone) {
+      justify-content: center; 
     }
   }
 
@@ -58,15 +34,66 @@
     display: inline-block;
     min-height: 5.8rem;
     min-width: 4.8rem;
-    max-width: 21rem;
-    border: 1px solid blue;
+    max-width: 21rem; 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
     @media (max-width: $tab-port) {
-      margin-right: 0;
       margin-bottom: 3.3rem;
+    }
+    @media (max-width: $phone) {
+      margin-right: 0;
+  
+      &--1 {
+        min-width: 50%;
+        max-width: 50%;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        &:first-child {
+          justify-content: flex-start;
+        }
+
+        &:nth-child(2) {
+          justify-content: flex-end;
+        }
+        & img {
+          width: 50%;
+        }
+      }
+
+      &--2 {
+        min-width: 33.3333%;
+        max-width: 33.3333%;
+        &:not(:last-child) {
+          margin-right: 0;;
+        }
+        &:nth-child(3) {
+          justify-content: flex-start;
+        }
+        &:nth-child(5) {
+          justify-content: flex-end;
+        }
+        & img {
+          width: 50%;
+        }
+      }
+
+      &--3 {
+        min-width: 100%;
+        max-width: 100%;
+        &:not(:last-child) {
+          margin-right: 0;
+        }
+        & img {
+          width: 50%;
+        }
+      }
     }
   }
 }
