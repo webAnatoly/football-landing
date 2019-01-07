@@ -41,8 +41,9 @@
     width: 31.1rem;
     margin: auto;
     padding: 0 .5rem;
+    border: 1px solid red;
 
-    @media (max-width: $tab-land) {
+    @media (max-width: 80em) { // 1280px / 16 = 80em;
       padding: 0 1rem;
       width: 100%;
     }
