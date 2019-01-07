@@ -2,10 +2,108 @@
   min-height: 12.7rem;
   background: #00ADEE;
   color: $grey-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-  & .logo {
-    // color: $grey-light;
-    top: 1rem;
-    left: 44rem;
+  @media (max-width: $phone) {
+    min-height: 21rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 4.1rem;
+  }
+
+  a {
+    color: $grey-light;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    height: 3.2rem;
+
+    &--center {
+      width: 50%;
+      justify-content: center;
+
+      @media (max-width: $phone) {
+        width: 100%;
+        margin-top: 3.4rem;
+        order: 3;
+      }
+    }
+
+    &--1 {
+      width: 25%;
+      justify-content: flex-start;
+
+      @media (max-width: $phone) {
+        width: 100%;
+        order: 1;
+      }
+    }
+
+    &--2 {
+      width: 25%;
+      justify-content: flex-end;
+
+      @media (max-width: $phone) {
+        width: 100%;
+        justify-content: flex-start;
+        margin-top: 1.1rem;
+        order: 2;
+      }
+    }
+  }
+
+  &__menu {
+
+    @media (max-width: $phone) {
+      width: 100%;
+    }
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    li {
+      display: inline-block;
+      text-transform: capitalize;
+
+      &:not(:last-child) {
+        margin-right: 3.6rem;
+
+        @media (max-width: $tab-port) {
+          margin-right: 1.9rem;
+        }
+      }
+    }
+  }
+
+  &__icons {
+    min-width: 10.9rem;
+    max-width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    &__icon-holder {
+      width: 2.5rem;
+      height: 2.5rem;
+
+      & img {
+        width: 100%;
+        height: 100%;
+      }
+
+      & .footer__svg {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
   }
 }
