@@ -2,6 +2,7 @@
   min-height: 73.5rem;
   background: $color-main url('./../img/bg-blue.svg') no-repeat left top / cover;
   color: $grey-light;
+  border: 1px solid transparent;
 
   @media (max-width: $phone) {
     background: $grey-light;

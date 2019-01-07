@@ -1,6 +1,7 @@
 .get-up {
   min-height: 48.3rem;
   background: url('./../img/bg-phones-2.png') no-repeat;
+  background-size: 66.6rem 48.3rem;
   overflow: hidden;
 
   @media (max-width: $tab-land) {
@@ -21,10 +22,7 @@
 
   &__article {
     margin-top: 6.45rem;
-
-    @media (max-width: $tab-port) {
-      width: 100%;
-    }
+    width: 100%;
 
     @media (max-width: $phone) {
       margin: 0 auto;
