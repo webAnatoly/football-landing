@@ -54,6 +54,14 @@ body {
   }
 }
 
+.show-mobile {
+  display: none;
+
+  @media (max-width: $phone) {
+    display: block;
+  }
+}
+
 .big-zindex {
   position: relative;
   z-index: 999;
