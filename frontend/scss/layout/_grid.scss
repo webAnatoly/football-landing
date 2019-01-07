@@ -39,7 +39,6 @@ div[class^="col-"]:not(:last-child) {
   min-height: inherit;
   padding: 0;
   margin: 0;
-  border: 1px dashed green;
 
   @media only screen and (max-width:$phone) {
     width: 100%;
