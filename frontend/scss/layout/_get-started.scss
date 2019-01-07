@@ -3,6 +3,9 @@
   background-color: $grey-light;
   overflow: hidden;
 
+  @media (max-width: $tab-port) {
+    min-height: 20rem;
+  }
   @media (max-width: $phone) {
     min-height: 30rem;
   }
@@ -12,7 +15,7 @@
     width: 47.5rem;
 
     @media (max-width: $tab-port) {
-      margin-top: 15rem;
+      margin-top: 12rem;
       width: 38rem;
     }
 

@@ -8,6 +8,9 @@
   background-size: 65%;
   overflow: hidden;
 
+  @media (max-width: $tab-port) {
+    min-height: 22.8rem;
+  }
   @media (max-width: $phone) {
     background-image: none;
     min-height: 22.8rem;
