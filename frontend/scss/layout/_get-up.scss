@@ -6,13 +6,14 @@
 
   @media (max-width: $tab-land) {
     background: url('./../img/bg-phones-2.png') no-repeat;
+    background-size: cover;
   }
   @media (max-width: $phone) {
     min-height: 3.7rem;
     background: none;
   }
 
-  &__bg-layer {
+  &__bg-layer { /* слой, чтобы сделать фоновую картинку полупрозрачной для небольших экранов */
     background: transparent;
 
     @media (max-width: $tab-land) {
@@ -23,6 +24,10 @@
   &__article {
     margin-top: 6.45rem;
     width: 100%;
+
+    @media (max-width: $tab-port) {
+      margin-top: 3.45rem;
+    }
 
     @media (max-width: $phone) {
       margin: 0 auto;
