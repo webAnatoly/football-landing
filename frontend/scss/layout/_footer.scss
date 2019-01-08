@@ -1,5 +1,6 @@
 .footer {
   min-height: 12.7rem;
+  height: 12.7rem; // для IE11 чтобы flex-box работал нормально
   background: #00ADEE;
   color: $grey-light;
   display: flex;
@@ -8,6 +9,7 @@
 
   @media (max-width: $phone) {
     min-height: 21rem;
+    height: 21rem;
     flex-direction: column;
     justify-content: flex-start;
     padding-top: 4.1rem;
