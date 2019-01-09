@@ -2,7 +2,6 @@
   /* конфигурация */
   var width = 34.5; // ширина слайда (ширина карточки 30.9 + margin-right 3.6)
   var count = 3 // количество слайдов для сдвига для десктоп версии
-  var quantityFragments = []; // кол-во фрагментов (порций), которыми будет показываться карточки в слайдере. Например, если 9 карточек показывать по три штуки, то фрагментов будет 9/3 = 3
 
   var carousel = document.getElementById('carousel');
   var list = carousel.querySelector('.carousel ul');
@@ -52,9 +51,19 @@
   }
 
   // Определить кол-во фрагментов для показа. Например если слайдер из 9 карточек и показываться будет по три карточки, то фрагментов будет 9/3 = 3
-  function getQuantityFragments() {
-    var fragments = Math.ceil(listElems.length / count);
+  function getQuantityFragments(divisor) {
+    var fragments = Math.ceil(listElems.length / divisor);
     return fragments;
+  }
+
+  // обработчик клика на индикаторе
+  function clickHandler(event) {
+    if (event.target.dataset) {
+      console.log(event.target.dataset.indicatorKey);
+      // тут надо от текущего елемента пройти циклом и удалить все предыдущие классы css цветов
+      // и потом от текущего добавить новые от тёмного к светлом
+      // так же нужно перелеснуть слайды, если кликнули на третьем, то перелестуть на третий фрагмент и т.д.
+    }
   }
 
   // В соответствии с кол-вом фрагментов(шагов) сгенерить и добавить дивы с классом 'carousel__indicators__indicator' и data-indicator-key каждому div'y
@@ -65,6 +74,7 @@
       var div = document.createElement('div');
       div.className = "carousel__indicators__indicator";
       div.dataset.indicatorKey = n;
+      div.addEventListener('click', clickHandler);
       wrapper.appendChild(div);
     }
     // перед вставкой удалить прошлый элементы
@@ -75,13 +85,28 @@
     indicators.appendChild(wrapper);
   }
 
+  // функция разукрашивает индикаторы путём добавления css классов
+  function colorIndicators(currentIndex) { 
+    indicators = document.querySelectorAll('.carousel__indicators__indicator');
+    indicators.forEach(function(div) {
+      if(Number(div.dataset.indicatorKey) === 1) {
+        div.classList.add("indicator-color-7");
+        console.log(div.classList);
+      } else {
+        div.classList.add("indicator-color-3");
+      }
+    })
+  }
+
   window.addEventListener('resize', function() {
     changeParametres();
-    createIndicators(getQuantityFragments());
+    createIndicators(getQuantityFragments(count));
+    setTimeout(function(){ colorIndicators(1) }, 0); // обернул в setTimeout, чтобы функция colorIndicators сработала, только после завершения функции createIndicators
   })
   document.addEventListener('DOMContentLoaded', function() {
     changeParametres();
-    createIndicators(getQuantityFragments());
+    createIndicators(getQuantityFragments(count));
+    setTimeout(function(){ colorIndicators(1) }, 0); // обернул в setTimeout, чтобы функция colorIndicators сработала, только после завершения функции createIndicators
   });
 })();
 
