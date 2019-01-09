@@ -24,7 +24,12 @@
     opacity: .8;
     z-index: 1;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-land) {
+      width: 5rem;
+      box-shadow: 10px 3px 30px white,
+      10px -3px 15px white;
+    }
+    @media (max-width: $tab-port) {
       display: none;
     }
   }
@@ -43,7 +48,12 @@
     -30px -3px 15px white;
     z-index: 1;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-land) {
+      width: 5rem;
+      box-shadow: -10px 3px 30px white,
+      -10px -3px 15px white;
+    }
+    @media (max-width: $tab-port) {
       display: none;
     }
   }
@@ -92,8 +102,7 @@
   &__btn--left {
     left: 3.5%;
 
-    @media (max-width: $phone) {
-      // display: none;
+    @media (max-width: $tab-port) {
       opacity: .5;
     }
   }
@@ -101,7 +110,7 @@
   &__btn--right {
     right: 3.5%;
 
-    @media (max-width: $phone) {
+    @media (max-width: $tab-port) {
       opacity: .5;
     }
   }
@@ -113,7 +122,8 @@
     align-items: center;
     padding: 2rem;
     min-height: 9.8rem;
-    // border: 3px solid gold;
+    height: 9.8rem;
+    overflow: auto;
 
     @media (max-width: $phone) {
       min-height: 7.4rem;
@@ -124,10 +134,14 @@
       width: 1.1rem;
       height: 1.1rem;
       border-radius: 11px;
-      background: #828282;
+      background: $grey-light-2--3;
       
       &:not(:last-child) {
         margin-right: 1.1rem;
+      }
+
+      &--current {
+        background-color: $grey-light-4;
       }
     }
   }
