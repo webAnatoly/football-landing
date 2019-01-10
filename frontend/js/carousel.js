@@ -58,11 +58,8 @@
 
   // обработчик клика на индикаторе
   function clickHandler(event) {
-    if (event.target.dataset) {
-      console.log(event.target.dataset.indicatorKey);
-      // тут надо от текущего елемента пройти циклом и удалить все предыдущие классы css цветов
-      // и потом от текущего добавить новые от тёмного к светлом
-      // так же нужно перелеснуть слайды, если кликнули на третьем, то перелестуть на третий фрагмент и т.д.
+    if (event.target.dataset.indicatorKey) {
+      colorIndicators(Number(event.target.dataset.indicatorKey));
     }
   }
 
@@ -85,28 +82,49 @@
     indicators.appendChild(wrapper);
   }
 
-  // функция разукрашивает индикаторы путём добавления css классов
-  function colorIndicators(currentIndex) { 
-    indicators = document.querySelectorAll('.carousel__indicators__indicator');
-    indicators.forEach(function(div) {
-      if(Number(div.dataset.indicatorKey) === 1) {
-        div.classList.add("indicator-color-7");
-        console.log(div.classList);
+  // функция разукрашивает индикаторы путём добавления css классов (текущий индикатор самый темный, следующий светлее и т.д. до 7 индикаторов в обе стороны, остальные одного цвета)
+  function colorIndicators(current) {
+    const limit = 7;
+    const cssClass = "carousel__indicators__indicator";
+    // var indicators = document.querySelectorAll('.carousel__indicators__indicator');
+    var indicators = document.querySelectorAll('.' + cssClass);
+    var howMuch = indicators.length;
+
+    // сбросить раскраску
+    indicators.forEach(function(indicator) {
+      indicator.className = cssClass;
+    });
+
+
+    // разукрасить индикаторы с права-налево от текущей позиции
+    for (var i = current; i < howMuch && i < current + limit; i += 1) {
+      indicators[i].className = cssClass + " indicator-color-" + (limit - i + current);
+    }
+    // разукрасить с лева-направо от текущей позиции
+    if (current > 0) {
+      
+      var min = limit - 1;   // минимальное кол-во итераций
+      var start = current - limit + 1; // позиция с которой стартовать перебор массива indicators
+
+      if (current <= 7) { // если current < 7
+        for (var i = 0; i <= current; i += 1) {
+          indicators[i].className = cssClass + " indicator-color-" + (limit + i - current);
+        }
       } else {
-        div.classList.add("indicator-color-3");
+        console.log('разукрасить правые индикаторы, когда текущий больше 7');
       }
-    })
+    }
   }
 
   window.addEventListener('resize', function() {
     changeParametres();
     createIndicators(getQuantityFragments(count));
-    setTimeout(function(){ colorIndicators(1) }, 0); // обернул в setTimeout, чтобы функция colorIndicators сработала, только после завершения функции createIndicators
+    setTimeout(function(){ colorIndicators(0) }, 0); // обернул в setTimeout, чтобы функция colorIndicators сработала, только после завершения функции createIndicators
   })
   document.addEventListener('DOMContentLoaded', function() {
     changeParametres();
     createIndicators(getQuantityFragments(count));
-    setTimeout(function(){ colorIndicators(1) }, 0); // обернул в setTimeout, чтобы функция colorIndicators сработала, только после завершения функции createIndicators
+    setTimeout(function(){ colorIndicators(0) }, 0); // обернул в setTimeout, чтобы функция colorIndicators сработала, только после завершения функции createIndicators
   });
 })();
 
