@@ -135,13 +135,9 @@
       height: 1.1rem;
       border-radius: 11px;
       cursor: pointer;
-      
+
       &:not(:last-child) {
         margin-right: 1.1rem;
-      }
-
-      &--current {
-        background-color: $grey-light-4;
       }
     }
   }

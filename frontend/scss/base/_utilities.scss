@@ -44,7 +44,7 @@
   height: 3.2rem;
 }
 
-/* Классы для индикаторов слайдера. Планирую их добавлять динамически через JS */
+/* Классы для индикаторов слайдера. Добавляются динамически через JS */
 .indicator-color-1 { background-color: $grey-light-2--1; }
 .indicator-color-2 { background-color: $grey-light-2; }
 .indicator-color-3 { background-color: $grey-light-2--3; }

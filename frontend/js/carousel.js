@@ -95,23 +95,23 @@
       indicator.className = cssClass;
     });
 
-
     // разукрасить индикаторы с права-налево от текущей позиции
     for (var i = current; i < howMuch && i < current + limit; i += 1) {
       indicators[i].className = cssClass + " indicator-color-" + (limit - i + current);
     }
     // разукрасить с лева-направо от текущей позиции
     if (current > 0) {
-      
-      var min = limit - 1;   // минимальное кол-во итераций
-      var start = current - limit + 1; // позиция с которой стартовать перебор массива indicators
 
       if (current <= 7) { // если current < 7
         for (var i = 0; i <= current; i += 1) {
           indicators[i].className = cssClass + " indicator-color-" + (limit + i - current);
         }
       } else {
-        console.log('разукрасить правые индикаторы, когда текущий больше 7');
+        var start = current - limit + 1; // позиция с которой стартовать перебор массива indicators
+        for (var i = start; i < current; i += 1) {
+          var colorIndex = limit - (current - i);
+          indicators[i].className = cssClass + " indicator-color-" + colorIndex;
+        }
       }
     }
   }
