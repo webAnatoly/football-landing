@@ -63,5 +63,9 @@
 
   &__store-buttons {
     margin: 5.9rem 0;
+
+    @media (max-width: $phone) {
+      margin: 5.9rem auto;
+    }
   }
 }

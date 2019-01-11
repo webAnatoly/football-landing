@@ -4,12 +4,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // border: 1px solid red;
 
   &__img-wrapper {
     display: inline-block;
     height: inherit;
     width: 15.605rem;
+
+    @media (max-width: $phone) {
+      &:first-child {
+        margin-right: 2rem;
+      }
+    }
   }
 
   & img {
@@ -20,7 +25,12 @@
 
   @media (max-width: $phone) {
     margin: auto;
+    justify-content: center;
+  }
+
+  @media (max-width: $phone-small) {
     width: 100%;
+    justify-content: space-between;
 
     &__img-wrapper {
       height: 4.4rem;

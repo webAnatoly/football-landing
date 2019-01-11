@@ -38,7 +38,7 @@
   }
 
   &__store-buttons {
-    margin-top: 3.8rem;
+    margin-top: 3.8rem 0;
 
     @media (max-width: $tab-port) {
       margin: 3.8rem auto;

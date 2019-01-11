@@ -43,6 +43,7 @@ $font-size--h2:     2.8rem;
   [1200 - 1800]   is where our normal styles apply
   1800px + :      Bid desktop
 */
+$phone-small: 22.5em; // 360px / 16px = 22.5em
 $phone: 37.5em; // 600px / 16px = 37.5em
 $tab-port: 56.25em; // 900px / 16 = 56.25em
 $tab-land: 75em;  // 1200px / 16 = 75em;
