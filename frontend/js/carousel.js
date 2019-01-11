@@ -15,6 +15,7 @@
     // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
     position = Math.min(position + width * count, 0);
     shiftSlides(position);
+    colorIndicators(Math.ceil(Math.abs(position / (width * count))));
   };
 
   carousel.querySelector('.carousel__btn--right').onclick = function () {
@@ -22,6 +23,7 @@
     // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
     position = Math.max(position - width * count, -width * (listElems.length - count));
     shiftSlides(position);
+    colorIndicators(Math.ceil(Math.abs(position / (width * count))));
   };
 
   function shiftSlides(position) {
