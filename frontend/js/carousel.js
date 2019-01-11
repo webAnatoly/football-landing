@@ -14,15 +14,39 @@
     // сдвиг вправо
     // последнее передвижение влево может быть не на 3, а на 2 или 1 элемент
     position = Math.min(position + width * count, 0);
-    list.style.marginLeft = position + 'rem';
+    shiftSlides(position);
   };
 
   carousel.querySelector('.carousel__btn--right').onclick = function () {
     // сдвиг влево
     // последнее передвижение вправо может быть не на 3, а на 2 или 1 элемент
     position = Math.max(position - width * count, -width * (listElems.length - count));
-    list.style.marginLeft = position + 'rem';
+    shiftSlides(position);
   };
+
+  function shiftSlides(position) {
+    list.style.marginLeft = position + 'rem';
+  }
+
+  // функция принимает key индикатора и на его основе вычисляет размер сдвига 
+  function calculateShift(key) {
+    var k = Number(key);
+    var leftShift;
+    if (k === 0) { 
+      leftShift = 0;
+      return leftShift;
+    }
+    var fragments = getQuantityFragments(count);
+    var step = width * (count * fragments) / fragments * k;
+
+    if (step > width * (listElems.length - count)) {
+      step = step - (count * fragments - listElems.length) * width;
+    }
+
+    leftShift = step * -1;
+
+    return leftShift;
+  }
 
   function centerCard(viewPort, modifier) {
     // сдвинуть весь ul таким образом, чтобы карточка оказалась по центру
@@ -58,8 +82,11 @@
 
   // обработчик клика на индикаторе
   function clickHandler(event) {
+    var key = Number(event.target.dataset.indicatorKey);
     if (event.target.dataset.indicatorKey) {
-      colorIndicators(Number(event.target.dataset.indicatorKey));
+      colorIndicators(key); // передаем функции key индикатора и она разукрашивает индикаторы влево и вправо от текущего
+      position = calculateShift(key);
+      shiftSlides(position);
     }
   }
 
