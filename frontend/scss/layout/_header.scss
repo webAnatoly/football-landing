@@ -8,6 +8,10 @@
   background-size: 65%;
   overflow: hidden;
 
+  @media (max-width: $tab-land) {
+    background-image: url('./../img/bg-phones-tab.png');
+  }
+
   @media (max-width: $tab-port) {
     min-height: 22.8rem;
   }
