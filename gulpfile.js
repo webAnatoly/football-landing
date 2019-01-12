@@ -54,7 +54,7 @@ gulp.task('html', () => {
 gulp.task('js', function (cb) {
   pump([
       gulp.src('frontend/js/**/*.js'),
-      // minify(),
+      minify(),
       gulp.dest('public/js')
     ],
     cb
